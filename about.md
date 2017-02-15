@@ -20,9 +20,7 @@ title: 关于我
 
 ### 实习经历
 
-1)我现在在恺英网络VR项目组做前端实习生[恺英网络VR](http://www.vronline.com/) ,之前是做[vronline] (http://www.vronline.com/)
-
-官网的一些页面，并与设计和后台php进行交流进行编写。并修改 [开放平台](open.vronline.com)的一些页面。同时也编写公司内部页游推荐的相关页面。
+1)我现在在恺英网络VR项目组做前端实习生[恺英网络VR组](http://www.vronline.com/) ,之前是做vronline官网的一些页面，并与设计和后台php进行交流进行编写。并修改 [开放平台](open.vronline.com)的一些页面。同时也编写公司内部页游推荐的相关页面。
 
 2)在2016年6月至9月在万达金融集团 [快钱COC-FE组](https://www.99bill.com/)实习,主要是做官网页面的编写与修改，同时对公司内CMS系统需要修改的进行修改。
 
