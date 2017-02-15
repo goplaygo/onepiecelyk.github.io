@@ -5,229 +5,275 @@
     <description>欢迎来到我的个人网站~</description>
     <link>http://francisliu.io/</link>
     <atom:link href="http://francisliu.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 15 Feb 2017 10:00:22 +0800</pubDate>
-    <lastBuildDate>Wed, 15 Feb 2017 10:00:22 +0800</lastBuildDate>
+    <pubDate>Wed, 15 Feb 2017 12:02:00 +0800</pubDate>
+    <lastBuildDate>Wed, 15 Feb 2017 12:02:00 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
     
       <item>
-        <title>学习HEXO搭建个人博客</title>
-        <description>&lt;p&gt;　　经过各种找资料，踩过各种坑，终于使用 hexo 搭建个人博客初步完成了，域名目前用得时 github 的，我的 hexo 是 3.1.1 版本，hexo 不同的版本，很多配置都不一样。好吧，废话不多说了，开始吧。&lt;/p&gt;
+        <title>Jekyll搭建个人博客</title>
+        <description>&lt;p&gt;哈喽，大家好，我是刘御锟，是一名初入前端的菜鸟，大学时读的计算机科学与技术专业，因为机缘巧合，发现前端很有意思，日新月异的变化给我很强烈的冲击，从此进入到前端的世界里！
+俗话说的好，自己学习好并不算真正的学好，你给大家讲解清楚才算真的好，所以我把我根据github和jekyll建造的个人网站的过程告诉大家。&lt;/p&gt;
 
-&lt;h2 id=&quot;section&quot;&gt;正文：&lt;/h2&gt;
-&lt;p&gt;　之前是想着写博客，一方面是给自己做笔记，可以提升自己的写作、总结能力，一个技术点我们会使用，并不难，但是要做到让让别人也能听懂我们讲得，还是需要一定的技巧和经验的。很多类似于CSDN、博客园也都可以写文章，但是页面的样式我，不是太喜欢，简书还算好点得。最近看到一些大神们的博客（在我的友情链接里有），貌似都是用hexo写得，我也依葫芦画瓢的搭建了一个。不罗嗦了，直接上搭建步骤。&lt;/p&gt;
+&lt;h3 id=&quot;section&quot;&gt;介绍&lt;/h3&gt;
 
-&lt;h2 id=&quot;section-1&quot;&gt;配置环境&lt;/h2&gt;
+&lt;p&gt;　Jekyll 是一个简单的博客形态的静态站点生产机器。它有一个模版目录，其中包含原始文本格式的文档，通过 Markdown （或者 Textile） 以及 Liquid 转化成一个完整的可发布的静态网站，你可以发布在任何你喜爱的服务器上。Jekyll 也可以运行在 GitHub Page 上，也就是说，你可以使用 GitHub 的服务来搭建你的项目页面、博客或者网站，而且是完全免费的&lt;/p&gt;
 
-&lt;h3 id=&quot;node&quot;&gt;安装Node（必须）&lt;/h3&gt;
+&lt;p&gt;　使用 Jekyll 搭建博客之前要确认下本机环境，Git 环境（用于部署到远端）、&lt;a href=&quot;http://www.ruby-lang.org/en/downloads/&quot;&gt;Ruby&lt;/a&gt; 环境（Jekyll 是基于 Ruby 开发的）、包管理器 &lt;a href=&quot;http://rubygems.org/pages/download&quot;&gt;RubyGems&lt;/a&gt;              &lt;br /&gt;
+　　如果你是 Mac 用户，你需要安装 Xcode 和 Command-Line Tools了。下载方式 Preferences → Downloads → Components。&lt;/p&gt;
 
-&lt;p&gt;作用：用来生成静态页面的
-到Node.js&lt;a href=&quot;https://nodejs.org/&quot;&gt;官网&lt;/a&gt;下载相应平台的最新版本，一路安装即可。&lt;/p&gt;
+&lt;p&gt;　　Jekyll 是一个免费的简单静态网页生成工具，可以配合第三方服务例如： Disqus（评论）、多说(评论) 以及分享 等等扩展功能，Jekyll 可以直接部署在 Github（国外） 或 Coding（国内） 上，可以绑定自己的域名。&lt;a href=&quot;http://jekyll.bootcss.com/&quot;&gt;Jekyll中文文档&lt;/a&gt;、&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll英文文档&lt;/a&gt;、&lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;Jekyll主题列表&lt;/a&gt;。&lt;/p&gt;
 
-&lt;h3 id=&quot;git&quot;&gt;安装Git（必须）&lt;/h3&gt;
-&lt;p&gt;作用：把本地的hexo内容提交到github上去.
-安装Xcode就自带有Git，我就不多说了。&lt;/p&gt;
+&lt;h3 id=&quot;jekyll-&quot;&gt;Jekyll 环境配置&lt;/h3&gt;
 
-&lt;h3 id=&quot;github&quot;&gt;申请GitHub（必须）&lt;/h3&gt;
-&lt;p&gt;作用：是用来做博客的远程创库、域名、服务器之类的，怎么与本地hexo建立连接等下讲。
-&lt;a href=&quot;https://github.com/&quot;&gt;github&lt;/a&gt;账号我也不再啰嗦了,没有的话直接申请就行了，跟一般的注册账号差不多，SSH Keys，看你自己了，可以不配制，不配置的话以后每次对自己的博客有改动提交的时候就要手动输入账号密码，配置了就不需要了，怎么配置我就不多说了，网上有很多教程。&lt;/p&gt;
+&lt;p&gt;安装 jekyll&lt;/p&gt;
 
-&lt;h3 id=&quot;hexo&quot;&gt;正式安装HEXO　&lt;/h3&gt;
-&lt;p&gt;Node和Git都安装好后，可执行如下命令安装hexo：&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;    
+$ gem install jekyll     
+&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo npm install -g hexo
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;p&gt;创建博客&lt;/p&gt;
 
-&lt;h3 id=&quot;section-2&quot;&gt;初始化&lt;/h3&gt;
-&lt;p&gt;创建一个文件夹，如：Blog，cd到Blog里执行hexo init的。命令：&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;   
+$ jekyll new myBlog    
+&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hexo init
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;p&gt;进入博客目录&lt;/p&gt;
 
-&lt;p&gt;好啦，至此，全部安装工作已经完成！&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
+$ cd myBlog  
+&lt;/code&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;section-3&quot;&gt;生成静态页面&lt;/h3&gt;
-&lt;p&gt;继续再Blog目录下执行如下命令，生成静态页面&lt;/p&gt;
+&lt;p&gt;启动本地服务&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hexo generate （hexo g  也可以）   
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
+$ jekyll serve
+&lt;/code&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;section-4&quot;&gt;本地启动&lt;/h3&gt;
-&lt;p&gt;启动本地服务，进行文章预览调试，命令：&lt;/p&gt;
+&lt;p&gt;在浏览器里输入： &lt;a href=&quot;http://localhost:4000&quot;&gt;http://localhost:4000&lt;/a&gt;，就可以看到你的博客效果了。&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hexo server   
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/jekyll/image1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;浏览器输入&lt;a href=&quot;就可以看到最原始的效果了&quot;&gt;http://localhost:4000&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;so easy !&lt;/p&gt;
 
-&lt;h3 id=&quot;hexo-1&quot;&gt;常见的HEXO配置错误：&lt;/h3&gt;
+&lt;h3 id=&quot;section-1&quot;&gt;目录结构&lt;/h3&gt;
+&lt;p&gt;　
+　Jekyll 的核心其实是一个文本转换引擎。它的概念其实就是： 你用你最喜欢的标记语言来写文章，可以是 Markdown，也可以是 Textile,或者就是简单的 HTML, 然后 Jekyll 就会帮你套入一个或一系列的布局中。在整个过程中你可以设置URL路径, 你的文本在布局中的显示样式等等。这些都可以通过纯文本编辑来实现，最终生成的静态页面就是你的成品了。&lt;/p&gt;
+
+&lt;p&gt;一个基本的 Jekyll 网站的目录结构一般是像这样的：&lt;/p&gt;
 
 &lt;p&gt;```
-ERROR Plugin load failed: hexo-server&lt;/p&gt;
-
-&lt;p&gt;原因： Besides, utilities are separated into a standalone module. hexo.util is not reachable anymore.&lt;/p&gt;
-
-&lt;p&gt;解决方法，执行命令：$ sudo npm install hexo-server&lt;/p&gt;
+.
+├── _config.yml
+├── _includes
+|   ├── footer.html
+|   └── header.html
+├── _layouts
+|   ├── default.html
+|   ├── post.html
+|   └── page.html
+├── _posts
+|   └── 2016-10-08-welcome-to-jekyll.markdown
+├── _sass
+|   ├── _base.scss
+|   ├── _layout.scss
+|   └── _syntax-highlighting.scss
+├── about.md
+├── css
+|   └── main.scss
+├── feed.xml
+└── index.html&lt;/p&gt;
 
 &lt;p&gt;```&lt;/p&gt;
 
-&lt;p&gt;```
-执行命令hexo server，提示：Usage: hexo&lt;command /&gt; ….&lt;/p&gt;
+&lt;p&gt;这些目录结构以及具体的作用可以参考 &lt;a href=&quot;http://jekyll.com.cn/docs/structure/&quot;&gt;官网文档&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;原因：我认为是没有生成本地服务&lt;/p&gt;
+&lt;p&gt;进入 _config.yml 里面，修改成你想看到的信息，重新 jekyll server ，刷新浏览器就可以看到你刚刚修改的信息了。&lt;/p&gt;
 
-&lt;p&gt;解决方法，执行命令：$ npm install hexo-server –save&lt;/p&gt;
+&lt;p&gt;到此，博客初步搭建算是完成了，&lt;/p&gt;
 
-&lt;p&gt;提示：hexo-server@0.1.2 node_modules/hexo-server
-….&lt;/p&gt;
+&lt;h3 id=&quot;section-2&quot;&gt;博客部署到远端&lt;/h3&gt;
 
-&lt;p&gt;表示成功了&lt;a href=&quot;https://hexo.io/zh-cn/docs/server.html&quot;&gt;参考&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;　我这里讲的是部署到 Github Page 创建一个 github 账号，然后创建一个跟你账户名一样的仓库，如我的 github 账户名叫 &lt;a href=&quot;https://github.com/onepiecelyk&quot;&gt;onepiecelyk&lt;/a&gt;，我的 github 仓库名就叫 &lt;a href=&quot;https://github.com/onepiecelyk/onepiecelyk.github.io&quot;&gt;onepiecelyk.github.io&lt;/a&gt;，创建好了之后，把刚才建立的 myBlog 项目 push 到 username.github.io仓库里去（username指的是你的github用户名），检查你远端仓库已经跟你本地 myBlog 同步了，然后你在浏览器里输入 username.github.io ，就可以访问你的博客了。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;编写文章&lt;/h3&gt;
+
+&lt;p&gt;　　所有的文章都是 _posts 目录下面，文章格式为 mardown 格式，文章文件名可以是 .mardown 或者 .md。&lt;/p&gt;
+
+&lt;p&gt;　　编写一篇新文章很简单，你可以直接从 _posts/ 目录下复制一份出来 &lt;code class=&quot;highlighter-rouge&quot;&gt;2016-10-16-welcome-to-jekyll副本.markdown&lt;/code&gt; ，修改名字为 2016-10-16-article1.markdown ，注意：文章名的格式前面必须为 2016-10-16- ，日期可以修改，但必须为 年-月-日- 格式，后面的 article1 是整个文章的连接 URL，如果文章名为中文，那么文章的连接URL就可能会出现一些乱码， 所以建议文章名最好是英文的或者阿拉伯数字。 双击 2016-10-16-article1.markdown 打开&lt;/p&gt;
 
 &lt;p&gt;```&lt;/p&gt;
 
-&lt;p&gt;这个时候再执行：$ hexo-server&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;layout: post
+title:  “Welcome to Jekyll!”
+date:   2017-01-14 15:29:08 +0800
+categories: jekyll update
+—&lt;/p&gt;
 
-&lt;p&gt;得到: INFO  Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to stop.&lt;/p&gt;
+&lt;p&gt;正文…&lt;/p&gt;
 
-&lt;p&gt;这个时候再点击&lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;http://0.0.0.0:4000&lt;/a&gt;，正常情况下应该是最原始的画面，但是我看到的是：
-白板和Cannot GET /   几个字
-原因： 由于2.6以后就更新了，我们需要手动配置些东西，我们需要输入下面三行命令：&lt;/p&gt;
+&lt;p&gt;```&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install hexo-renderer-ejs --save
-npm install hexo-renderer-stylus --save
-npm install hexo-renderer-marked --save
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;p&gt;title: 显示的文章名， 如：title: 我的第一篇文章                  &lt;br /&gt;
+date:  显示的文章发布日期，如：date: 2016-10-16                        &lt;br /&gt;
+categories: tag标签的分类，如：categories: 随笔&lt;/p&gt;
 
-&lt;p&gt;这个时候再重新生成静态文件，命令：&lt;/p&gt;
+&lt;p&gt;注意：文章头部格式必须为上面的，…. 就是文章的正文内容。&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hexo generate （或hexo g）
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;p&gt;我写文章使用的是 Sublime Text3 编辑器，如果你对 markdown 语法不熟悉的话，可以看看&lt;a href=&quot;https://www.zybuluo.com/&quot;&gt;作业部落的教程&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;启动本地服务器：&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
+$ jekyll server   
+&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hexo server （或hexo s）
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;h3 id=&quot;jekyll&quot;&gt;如果你本机没配置过任何jekyll的环境，可能会报错&lt;/h3&gt;
 
-&lt;p&gt;再点击网址&lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;http://0.0.0.0:4000&lt;/a&gt; OK终于可以看到属于你自己的blog啦，?，虽然很简陋，但好歹有了一个属于自己的小窝了。&lt;a href=&quot;https://disqus.com/home/discussion/bsspirit/hexogithubweb/&quot;&gt;参考链接&lt;/a&gt;，本地已经简单的设置好了，但是现在域名和服务器都是基于自己的电脑，接下来需要跟github进行关联。&lt;/p&gt;
+&lt;p&gt;```
+/Users/xxxxxxxx/.rvm/rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in &lt;code class=&quot;highlighter-rouge&quot;&gt;require&#39;: cannot load such file -- bundler (LoadError)
+	from /Users/xxxxxxxx/.rvm/rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in &lt;/code&gt;require’
+	from /Users/xxxxxxxx/.rvm/gems/ruby-2.2.2/gems/jekyll-3.3.0/lib/jekyll/plugin_manager.rb:34:in &lt;code class=&quot;highlighter-rouge&quot;&gt;require_from_bundler&#39;
+	from /Users/xxxxxxxx/.rvm/gems/ruby-2.2.2/gems/jekyll-3.3.0/exe/jekyll:9:in &lt;/code&gt;&amp;lt;top (required)&amp;gt;’
+	from /Users/xxxxxxxx/.rvm/gems/ruby-2.2.2/bin/jekyll:23:in &lt;code class=&quot;highlighter-rouge&quot;&gt;load&#39;
+	from /Users/xxxxxxxx/.rvm/gems/ruby-2.2.2/bin/jekyll:23:in &lt;/code&gt;&lt;main&gt;&#39;
+	from /Users/xxxxxxxx/.rvm/gems/ruby-2.2.2/bin/ruby_executable_hooks:15:in `eval&#39;
+	from /Users/xxxxxxxx/.rvm/gems/ruby-2.2.2/bin/ruby_executable_hooks:15:in `&lt;main&gt;&#39;&lt;/main&gt;&lt;/main&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;github-1&quot;&gt;配置Github&lt;/h2&gt;
+&lt;p&gt;```&lt;/p&gt;
 
-&lt;h3 id=&quot;repository&quot;&gt;建立Repository&lt;/h3&gt;
+&lt;p&gt;原因： 没有安装 bundler ，执行安装 bundler 命令&lt;/p&gt;
 
-&lt;p&gt;建立与你用户名对应的仓库，仓库名必须为【your_user_name.github.io】，固定写法
-然后建立关联，我的Blog在本地/Users/leopard/Blog，Blog是我之前建的东西也全在这里面，有：&lt;/p&gt;
+&lt;p&gt;```&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Blog      &lt;br /&gt;
-　｜      &lt;br /&gt;
-　｜－－ _config.yml     &lt;br /&gt;
-　｜－－ node_modules    &lt;br /&gt;
-　｜－－ public              &lt;br /&gt;
-　｜－－ source                                                &lt;br /&gt;
-　｜－－ db.json	        &lt;br /&gt;
-　｜－－ package.json        &lt;br /&gt;
-　｜－－ scaffolds        &lt;br /&gt;
-　｜－－ themes          　　　　　
-　　　&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;$ gem install bundler&lt;/p&gt;
 
-&lt;p&gt;现在我们需要_config.yml文件，来建立关联，命令：&lt;/p&gt;
+&lt;p&gt;```&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vim _config.yml
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;p&gt;提示：&lt;/p&gt;
 
-&lt;p&gt;翻到最下面，改成我这样子的，注意： &lt;code class=&quot;highlighter-rouge&quot;&gt;: 后面要有空格&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;```
+Fetching: bundler-1.13.5.gem (100%)
+Successfully installed bundler-1.13.5
+Parsing documentation for bundler-1.13.5
+Installing ri documentation for bundler-1.13.5
+Done installing documentation for bundler after 5 seconds
+1 gem installed&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;deploy:
-  type: git
-  repository: https://github.com/xxx/xxx.github.io.git
-  branch: master
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;p&gt;```&lt;/p&gt;
 
-&lt;p&gt;执行如下命令才能使用git部署&lt;/p&gt;
+&lt;p&gt;再次执行 $ jekyll server  ，提示&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install hexo-deployer-git --save
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;p&gt;```&lt;/p&gt;
 
-&lt;p&gt;网上会有很多说法，有的type是github, 还有repository 最后面的后缀也不一样，是github.com.git，我也踩了很多坑，我现在的版本是hexo: 3.1.1，执行命令hexo -vsersion就出来了,貌似3.0后全部改成我上面这种格式了。
-忘了说了，我没用SSH Keys如果你用了SSH Keys的话直接在github里复制SSH的就行了，总共就两种协议，相信你懂的。
-然后，执行配置命令：&lt;/p&gt;
+&lt;p&gt;Could not find proper version of jekyll (3.1.1) in any of the sources
+Run &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle install&lt;/code&gt; to install missing gems.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hexo deploy
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;p&gt;```&lt;/p&gt;
 
-&lt;p&gt;　然后再浏览器中输入&lt;a href=&quot;http://xxx.github.io/&quot;&gt;http://xxx.github.io/&lt;/a&gt;就行了，我的 github 的账户叫 xxx ,把这个改成你 github 的账户名就行了&lt;/p&gt;
+&lt;p&gt;跟着提示运行命令&lt;/p&gt;
 
-&lt;h3 id=&quot;section-5&quot;&gt;部署步骤&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
+$ bundle install
+&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;每次部署的步骤，可按以下三步来进行。&lt;/p&gt;
+&lt;p&gt;这个时候你可能会发现 bundle install 运行卡主不动了。&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hexo clean
-hexo generate
-hexo deploy
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;p&gt;如果很长时间都没任何提示的话，你可以尝试修改 gem 的 source&lt;/p&gt;
 
-&lt;p&gt;一些常用命令：&lt;/p&gt;
+&lt;p&gt;```
+$ gem sources –remove https://rubygems.org/
+$ gem sources -a https://gems.ruby-china.org/
+$ gem sources -l
+&lt;em&gt;** CURRENT SOURCES **&lt;/em&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hexo new &quot;postName&quot; #新建文章
-hexo new page &quot;pageName&quot; #新建页面
-hexo generate #生成静态页面至public目录
-hexo server #开启预览访问端口（默认端口4000，&#39;ctrl + c&#39;关闭server）
-hexo deploy #将.deploy目录部署到GitHub
-hexo help  #查看帮助
-hexo version  #查看Hexo的版本
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;p&gt;https://gems.ruby-china.org&lt;/p&gt;
 
-&lt;p&gt;这里有大量的&lt;a href=&quot;https://github.com/hexojs/hexo/wiki/Themes&quot;&gt;主题列表&lt;/a&gt;使用方法里面
-都有详细的介绍，我就不多说了。    &lt;br /&gt;
-我这里有几款个人认为不错的主题，免去你们，一个一个的选了，欢迎吐槽我的审美，?       &lt;br /&gt;
-　&lt;a href=&quot;https://github.com/daisygao/hexo-themes-cover&quot;&gt;Cover&lt;/a&gt; - A chic theme with facebook-like cover photo    &lt;br /&gt;
-　&lt;a href=&quot;https://github.com/henryhuang/oishi&quot;&gt;Oishi&lt;/a&gt; - A white theme based on Landscape plus and Writing.    &lt;br /&gt;
-　&lt;a href=&quot;https://github.com/hardywu/hexo-theme-sidebar&quot;&gt;Sidebar&lt;/a&gt; - Another theme based on Light with a simple sidebar  &lt;br /&gt;
-　&lt;a href=&quot;https://github.com/SuperKieran/TKL&quot;&gt;TKL&lt;/a&gt; - A responsive design theme for Hexo. 一个设计优雅的响应式主题  &lt;br /&gt;
-　&lt;a href=&quot;https://github.com/levonlin/Tinnypp&quot;&gt;Tinnypp&lt;/a&gt; - A clean, simple theme based on Tinny   &lt;br /&gt;
-　&lt;a href=&quot;https://github.com/yunlzheng/hexo-themes-writing&quot;&gt;Writing&lt;/a&gt; - A small and simple hexo theme based on Light   &lt;br /&gt;
-　&lt;a href=&quot;https://github.com/litten/hexo-theme-yilia&quot;&gt;Yilia&lt;/a&gt; - Responsive and simple style 优雅简洁响应式主题，我用得就是这个。  &lt;br /&gt;
-　&lt;a href=&quot;https://github.com/Voidly/pacman&quot;&gt;Pacman voidy&lt;/a&gt; - A theme with dynamic tagcloud and dynamic snow&lt;/p&gt;
+&lt;p&gt;```&lt;/p&gt;
 
-&lt;h3 id=&quot;section-6&quot;&gt;一些基本路径&lt;/h3&gt;
-&lt;p&gt;　文章在 source/_posts，编辑器可以用 Sublime，支持 markdown 语法。如果想修改头像可以直接在主题的 _config.yml 文件里面修改，友情链接，之类的都在这里，修改名字在 public/index.html 里修改，开始打理你的博客吧，有什么问题或者建议，都可以提出来，我会继续完善的。&lt;/p&gt;
+&lt;p&gt;再次执行命令 $ bundle install，发现开始有动静了&lt;/p&gt;
 
-&lt;p&gt;Markdown语法参考链接: &lt;a href=&quot;https://www.zybuluo.com/mdeditor&quot;&gt;作业部落&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;```
+Fetching gem metadata from https://rubygems.org/………..
+Fetching version metadata from https://rubygems.org/..
+Fetching dependency metadata from https://rubygems.org/.
+。。。
+Installing jekyll-watch 1.3.1
+Installing jekyll 3.1.1
+Bundle complete! 3 Gemfile dependencies, 17 gems now installed.
+Use &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle show [gemname]&lt;/code&gt; to see where a bundled gem is installed.&lt;/p&gt;
 
-&lt;h3 id=&quot;qa&quot;&gt;Q&amp;amp;A&lt;/h3&gt;
+&lt;p&gt;```&lt;/p&gt;
+
+&lt;p&gt;bundler安装完成，后再次启动本地服务&lt;/p&gt;
+
+&lt;p&gt;```
+$ jekyll server&lt;/p&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+
+&lt;p&gt;继续报错&lt;/p&gt;
+
+&lt;p&gt;```
+Configuration file: /Users/tendcloud-Caroline/Desktop/leopardpan.github.io/_config.yml
+  Dependency Error: Yikes! It looks like you don’t have jekyll-sitemap or one of its dependencies installed. In order to use Jekyll as currently configured, you’ll need to install this gem. The full error message from Ruby is: ‘cannot load such file – jekyll-sitemap’ If you run into trouble, you can find helpful resources at http://jekyllrb.com/help/! 
+jekyll 3.1.1 | Error:  jekyll-sitemap&lt;/p&gt;
+
+&lt;p&gt;```
+表示 当前的 jekyll 版本是 3.1.1 ，无法使用 jekyll-sitemap&lt;/p&gt;
+
+&lt;p&gt;解决方法有两个&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;问：如何让文章想只显示一部分和一个 &lt;code class=&quot;highlighter-rouge&quot;&gt;阅读全文&lt;/code&gt; 的按钮？     &lt;br /&gt;
-答：在文章中加一个 &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;!--more--&amp;gt;&lt;/code&gt; ， &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;!--more--&amp;gt;&lt;/code&gt; 后面的内容就不会显示出来了。&lt;/p&gt;
+  &lt;p&gt;1、打开当前目录下的 _config.yml 文件，把 gems: [jekyll-paginate,jekyll-sitemap] 换成 gems: [jekyll-paginate] ，也就是去掉jekyll-sitemap。&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt; &lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;问：本地部署成功了，也能预览效果，但使用 username.github.io 访问，&lt;code class=&quot;highlighter-rouge&quot;&gt;出现 404 &lt;/code&gt; .    &lt;br /&gt;
-答：首先确认 hexo d 命令执行是否报错，如果没有报错，再查看一下你的 github 的 username.github.io 仓库，你的博客是否已经成功提交了，你的 github 邮箱也要通过验证才行。&lt;/p&gt;
+  &lt;p&gt;2、升级 jekyll 版本，我当前的是 jekyll 3.1.2 。&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;修改完成后保存配置，再次执行&lt;/p&gt;
 
-&lt;p&gt;受到潘柏信的博客启发，拿出来共享&lt;a href=&quot;http://leopardpan.github.io&quot;&gt;http://leopardpan.github.io&lt;/a&gt; 谢谢！&lt;/p&gt;
+&lt;p&gt;```
+$ jekyll server&lt;/p&gt;
+
+&lt;p&gt;```
+提示&lt;/p&gt;
+
+&lt;p&gt;```
+ Incremental build: disabled. Enable with –incremental
+      Generating… 
+                    done in 0.901 seconds.
+ Auto-regeneration: enabled for ‘/Users/ky/study/onepiecelyk.github.io’
+Configuration file: /Users/ky/study/onepiecelyk.github.io/_config.yml
+    Server address: http://127.0.0.1:4000/
+  Server running… press ctrl-c to stop.&lt;/p&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+
+&lt;p&gt;表示本地服务部署成功。&lt;/p&gt;
+
+&lt;p&gt;在浏览器输入 &lt;a href=&quot;127.0.0.1:4000&quot;&gt;127.0.0.1:4000&lt;/a&gt; ， 就可以看到&lt;a href=&quot;onepiecelyk.github.io&quot;&gt;onepiecelyk.github.io&lt;/a&gt;博客效果了。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-4&quot;&gt;修改成你自己的博客&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;ul&gt;
+    &lt;li&gt;如果你想使用我的模板请把 _posts/ 目录下的文章都去掉。&lt;/li&gt;
+    &lt;li&gt;修改 _config.yml 文件里面的内容为你自己的。&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;然后使用 git push 到你自己的仓库里面去，检查你远端仓库，在浏览器输入 username.github.io 就会发现，你有一个漂亮的主题模板了。&lt;/p&gt;
+
+&lt;h4 id=&quot;section-5&quot;&gt;【 如果想修改博客样式却不知道怎么修改，可以直接在评论里给我提问 】&lt;/h4&gt;
+
+&lt;h3 id=&quot;jekyll-1&quot;&gt;为什么要是用 Jekyll&lt;/h3&gt;
+
+&lt;p&gt;使用了 Jekyll 你会发现如果你想使用多台电脑发博客都很方便，只要把远端 github 仓库里的博客 clone 下来，写文章后再提交就可以了.&lt;/p&gt;
+
 </description>
-        <pubDate>Tue, 25 Oct 2016 00:00:00 +0800</pubDate>
-        <link>http://francisliu.io/2016/10/HEXO%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
-        <guid isPermaLink="true">http://francisliu.io/2016/10/HEXO%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+        <pubDate>Sat, 14 Jan 2017 00:00:00 +0800</pubDate>
+        <link>http://francisliu.io/2017/01/jekyll_tutorials1/</link>
+        <guid isPermaLink="true">http://francisliu.io/2017/01/jekyll_tutorials1/</guid>
         
         <category>博客</category>
         
