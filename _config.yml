@@ -1,6 +1,6 @@
 # Basic
 title: 刘御锟
-subtitle: 个人网站
+subtitle: 刘御锟的网站
 description: 欢迎来到我的个人网站~
 # 头像里面的标题
 avatarTitle: Francis
@@ -10,7 +10,7 @@ url: "http://liuyukun.vip"
 
 # Comment
 comment:
-    # disqus: leopard
+    disqus: onepiecelyk
     duoshuo: onepiece 
 
 # Social
