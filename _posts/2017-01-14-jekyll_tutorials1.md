@@ -46,7 +46,7 @@ $ jekyll serve
 
 在浏览器里输入： [http://localhost:4000](http://localhost:4000)，就可以看到你的博客效果了。
 
-![](/images/posts/jekyll/image1.png)
+
 
 so easy !
 
@@ -67,7 +67,7 @@ so easy !
 |   ├── post.html
 |   └── page.html
 ├── _posts
-|   └── 2016-10-08-welcome-to-jekyll.markdown
+|   └── xxxx-xx-xx-welcome-to-jekyll.markdown
 ├── _sass
 |   ├── _base.scss
 |   ├── _layout.scss
@@ -212,7 +212,7 @@ $ jekyll server
 继续报错
 
 ```
-Configuration file: /Users/tendcloud-Caroline/Desktop/leopardpan.github.io/_config.yml
+Configuration file: /Users/tendcloud-Caroline/Desktop/onepiecelyk.github.io/_config.yml
   Dependency Error: Yikes! It looks like you don't have jekyll-sitemap or one of its dependencies installed. In order to use Jekyll as currently configured, you'll need to install this gem. The full error message from Ruby is: 'cannot load such file -- jekyll-sitemap' If you run into trouble, you can find helpful resources at http://jekyllrb.com/help/! 
 jekyll 3.1.1 | Error:  jekyll-sitemap
 
@@ -243,6 +243,31 @@ Configuration file: /Users/ky/study/onepiecelyk.github.io/_config.yml
   Server running... press ctrl-c to stop.
 
 ```
+可能有时候也会出现
+
+```
+WARN: Unresolved specs during Gem::Specification.reset:
+      jekyll-watch (~> 1.1)
+      rouge (~> 1.7)
+WARN: Clearing out unresolved specs.
+Please report a bug if this causes problems.
+/Library/Ruby/Gems/2.0.0/gems/bundler-1.14.4/lib/bundler/runtime.rb:40:in `block in setup': You have already activated colorator 1.1.0, but your Gemfile requires colorator 0.1. Prepending `bundle exec` to your command may solve this. (Gem::LoadError)
+	from /Library/Ruby/Gems/2.0.0/gems/bundler-1.14.4/lib/bundler/runtime.rb:25:in `map'
+	from /Library/Ruby/Gems/2.0.0/gems/bundler-1.14.4/lib/bundler/runtime.rb:25:in `setup'
+	from /Library/Ruby/Gems/2.0.0/gems/bundler-1.14.4/lib/bundler.rb:100:in `setup'
+	from /Library/Ruby/Gems/2.0.0/gems/jekyll-3.4.0/lib/jekyll/plugin_manager.rb:36:in `require_from_bundler'
+	from /Library/Ruby/Gems/2.0.0/gems/jekyll-3.4.0/exe/jekyll:9:in `<top (required)>'
+	from /usr/local/bin/jekyll:22:in `load'
+	from /usr/local/bin/jekyll:22:in `<main>'
+```
+
+这时候你可以输入
+
+```
+$ bundle exec jekyll server 
+
+```
+就会成功了。
 
 表示本地服务部署成功。
 
@@ -256,11 +281,10 @@ Configuration file: /Users/ky/study/onepiecelyk.github.io/_config.yml
 然后使用 git push 到你自己的仓库里面去，检查你远端仓库，在浏览器输入 username.github.io 就会发现，你有一个漂亮的主题模板了。      
 
 
-#### 【 如果想修改博客样式却不知道怎么修改，可以直接在评论里给我提问 】
 
 ### 为什么要是用 Jekyll
 
-使用了 Jekyll 你会发现如果你想使用多台电脑发博客都很方便，只要把远端 github 仓库里的博客 clone 下来，写文章后再提交就可以了.
+使用了 Jekyll 你会发现如果你想使用多台电脑发博客都很方便，只要把远端 github 仓库里的博客 clone 下来，写文章后再提交就可以了.比起来HEXO要相对简单一点。当然有比较喜欢HEXO的也是可以的。
 
 
 

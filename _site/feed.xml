@@ -3,10 +3,10 @@
   <channel>
     <title>刘御锟</title>
     <description>欢迎来到我的个人网站~</description>
-    <link>http://yukun.online/</link>
-    <atom:link href="http://yukun.online/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 15 Feb 2017 15:04:11 +0800</pubDate>
-    <lastBuildDate>Wed, 15 Feb 2017 15:04:11 +0800</lastBuildDate>
+    <link>http://liuyukun.vip/</link>
+    <atom:link href="http://liuyukun.vip/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 16 Feb 2017 10:05:04 +0800</pubDate>
+    <lastBuildDate>Thu, 16 Feb 2017 10:05:04 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
     
       <item>
@@ -51,8 +51,6 @@ $ jekyll serve
 
 &lt;p&gt;在浏览器里输入： &lt;a href=&quot;http://localhost:4000&quot;&gt;http://localhost:4000&lt;/a&gt;，就可以看到你的博客效果了。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/posts/jekyll/image1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
 &lt;p&gt;so easy !&lt;/p&gt;
 
 &lt;h3 id=&quot;section-1&quot;&gt;目录结构&lt;/h3&gt;
@@ -72,7 +70,7 @@ $ jekyll serve
 |   ├── post.html
 |   └── page.html
 ├── _posts
-|   └── 2016-10-08-welcome-to-jekyll.markdown
+|   └── xxxx-xx-xx-welcome-to-jekyll.markdown
 ├── _sass
 |   ├── _base.scss
 |   ├── _layout.scss
@@ -213,7 +211,7 @@ $ jekyll server&lt;/p&gt;
 &lt;p&gt;继续报错&lt;/p&gt;
 
 &lt;p&gt;```
-Configuration file: /Users/tendcloud-Caroline/Desktop/leopardpan.github.io/_config.yml
+Configuration file: /Users/tendcloud-Caroline/Desktop/onepiecelyk.github.io/_config.yml
   Dependency Error: Yikes! It looks like you don’t have jekyll-sitemap or one of its dependencies installed. In order to use Jekyll as currently configured, you’ll need to install this gem. The full error message from Ruby is: ‘cannot load such file – jekyll-sitemap’ If you run into trouble, you can find helpful resources at http://jekyllrb.com/help/! 
 jekyll 3.1.1 | Error:  jekyll-sitemap&lt;/p&gt;
 
@@ -247,7 +245,32 @@ Configuration file: /Users/ky/study/onepiecelyk.github.io/_config.yml
     Server address: http://127.0.0.1:4000/
   Server running… press ctrl-c to stop.&lt;/p&gt;
 
-&lt;p&gt;```&lt;/p&gt;
+&lt;p&gt;```
+可能有时候也会出现&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
+WARN: Unresolved specs during Gem::Specification.reset:
+      jekyll-watch (~&amp;gt; 1.1)
+      rouge (~&amp;gt; 1.7)
+WARN: Clearing out unresolved specs.
+Please report a bug if this causes problems.
+/Library/Ruby/Gems/2.0.0/gems/bundler-1.14.4/lib/bundler/runtime.rb:40:in `block in setup&#39;: You have already activated colorator 1.1.0, but your Gemfile requires colorator 0.1. Prepending `bundle exec` to your command may solve this. (Gem::LoadError)
+	from /Library/Ruby/Gems/2.0.0/gems/bundler-1.14.4/lib/bundler/runtime.rb:25:in `map&#39;
+	from /Library/Ruby/Gems/2.0.0/gems/bundler-1.14.4/lib/bundler/runtime.rb:25:in `setup&#39;
+	from /Library/Ruby/Gems/2.0.0/gems/bundler-1.14.4/lib/bundler.rb:100:in `setup&#39;
+	from /Library/Ruby/Gems/2.0.0/gems/jekyll-3.4.0/lib/jekyll/plugin_manager.rb:36:in `require_from_bundler&#39;
+	from /Library/Ruby/Gems/2.0.0/gems/jekyll-3.4.0/exe/jekyll:9:in `&amp;lt;top (required)&amp;gt;&#39;
+	from /usr/local/bin/jekyll:22:in `load&#39;
+	from /usr/local/bin/jekyll:22:in `&amp;lt;main&amp;gt;&#39;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;这时候你可以输入&lt;/p&gt;
+
+&lt;p&gt;```
+$ bundle exec jekyll server&lt;/p&gt;
+
+&lt;p&gt;```
+就会成功了。&lt;/p&gt;
 
 &lt;p&gt;表示本地服务部署成功。&lt;/p&gt;
 
@@ -264,16 +287,14 @@ Configuration file: /Users/ky/study/onepiecelyk.github.io/_config.yml
 
 &lt;p&gt;然后使用 git push 到你自己的仓库里面去，检查你远端仓库，在浏览器输入 username.github.io 就会发现，你有一个漂亮的主题模板了。&lt;/p&gt;
 
-&lt;h4 id=&quot;section-5&quot;&gt;【 如果想修改博客样式却不知道怎么修改，可以直接在评论里给我提问 】&lt;/h4&gt;
-
 &lt;h3 id=&quot;jekyll-1&quot;&gt;为什么要是用 Jekyll&lt;/h3&gt;
 
-&lt;p&gt;使用了 Jekyll 你会发现如果你想使用多台电脑发博客都很方便，只要把远端 github 仓库里的博客 clone 下来，写文章后再提交就可以了.&lt;/p&gt;
+&lt;p&gt;使用了 Jekyll 你会发现如果你想使用多台电脑发博客都很方便，只要把远端 github 仓库里的博客 clone 下来，写文章后再提交就可以了.比起来HEXO要相对简单一点。当然有比较喜欢HEXO的也是可以的。&lt;/p&gt;
 
 </description>
         <pubDate>Sat, 14 Jan 2017 00:00:00 +0800</pubDate>
-        <link>http://yukun.online/2017/01/jekyll_tutorials1/</link>
-        <guid isPermaLink="true">http://yukun.online/2017/01/jekyll_tutorials1/</guid>
+        <link>http://liuyukun.vip/2017/01/jekyll_tutorials1/</link>
+        <guid isPermaLink="true">http://liuyukun.vip/2017/01/jekyll_tutorials1/</guid>
         
         <category>博客</category>
         
