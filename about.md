@@ -33,7 +33,7 @@ title: 关于我
 其中包括的功能有物品的增删改查，物品的智能推荐功能。后期时运用 **SpringMVC** 进行编写。相关简易代码放到我的 [github](https://github.com/onepiecelyk/ebuy)上了
 
 后期为了增加自己的前端设计页面的能力,在网上学习的教程和学长提供的建议编写了商场的官网页面[水果商店](https://github.com/onepiecelyk/FruitWorld)和京东电子商务网站的主页[京东](https://github.com/onepiecelyk/JDHomePage)，于此同时发现了Javascript的重要性，并在网上看了廖雪峰老师的Javascript教程和买了一本Javascript Dom编程和Javascript高级程序设计进行学习。
-进入公司后了解了Vue.Js和Node.Js，于是在公司边完成公司的项目，边学习Vue和Node，并且决定用Node.Js作为自己的毕业设计主要语言。同时借鉴了《Node.Js实战(2)》这本书。
+进入公司后了解了Vue.Js和Node.Js，于是在公司边完成公司的项目，边学习Vue和Node，并且决定用Node.Js作为自己的毕业设计主要语言。
 
 ### 大学荣誉 AWARDS
 
