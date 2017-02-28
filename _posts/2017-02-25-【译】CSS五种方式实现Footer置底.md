@@ -133,7 +133,10 @@ grid-template-rows:1px auto;}
 grid-row-end:3;}
 ```
 PS：如果不是很理解，我们还有[Grid布局教程](http://www.w3cplus.com/css3/line-base-placement-layout.html)呢。
+
+
 十分遗憾的是目前网格布局仅仅只有火狐浏览器和谷歌浏览器支持
 
-##总结
+##  总结
+
 其实这种页脚置底的布局随处可见，我们大家都会用，但是有时候用一些新的方式来编写相信也是一种提高。
