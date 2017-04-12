@@ -424,7 +424,8 @@ img::-moz-selection {
   }
 
   hr {
-    border: none; }
+    border: none;
+  background-color: #ed7b1d}
 
   .section-title__divider {
     width: 30%;
@@ -861,7 +862,7 @@ img::-moz-selection {
     color: #000000; 
     background-color: #FAFAFA;
   }
-}
+
 
 .post-list__meta {
   display: block;
