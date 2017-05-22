@@ -108,4 +108,212 @@ var superMsg = new superMsg();
 var itrems = getItems();
 var goSportsTeam = true;
 var dragonball = 'z';   
- ```
+```
+ - 未赋值变量最后声明
+```
+//bad
+var i ,len,dragonball,items = getItems(),goSportsTeam = true;
+//bad
+var i;
+var items = getItems();
+var dragonball;
+var goSportsTeam = true;
+var len;
+//good
+var items = getItems();
+var goSportTeam = true;
+var dragonball;
+var length;
+var i;
+```
+- 
+在作用域顶部声明变量
+```
+//bad
+function (){
+    test();
+    console.log('do something');
+    // other 
+    var name = getName();
+     if(name =='test'){
+         return name;
+     }
+}
+//good
+function (){
+    var name = getName();
+    test();
+    console.log('do something');
+    //other
+    if(name =='test'){
+        return false;
+    }
+    return name;
+}
+//bad
+function (){
+    var name = getName();
+    if(!argument.length){
+        return false;
+    }
+    this.setFirstName(name);
+    return true;
+}
+//good
+function (){
+    var name;
+    if(!arguments.length){
+        return false;
+    }
+    name = getName();
+    this.setFirstName(name);
+    return true;
+}
+```
+
+### 对象
+
+- 使用对象字面量创建对象
+```
+//bad 
+var Person = new Object();
+//good
+var person ={};
+```
+- 不使用保留字做对象属性
+```//bad
+var person = {
+    nama:'style',
+    private:true;
+}
+//good
+var person ={
+    name:'style',
+    self:true;
+}
+```
+- 使用可读性的同义词代替保留字
+```
+//bad
+var person = {
+    class:'guide'
+};
+//bad
+var person = {
+    klass:'guide'
+};
+//good
+var person = {
+    type:'guide'
+}
+```
+### 属性
+- 用点号访问属性
+```
+var lu = {
+    jjj:true,
+    name:24
+};
+//bad
+var isjj:lu['jjj'];
+//good
+var isjj:lu.jjj; 
+```
+- 通过变量访问对象属性时使用中括号
+```
+var luke={
+    jed:true,
+    age:24
+};
+function getProp(prop){
+    return luke[prop];
+}
+var isJed = getProp('jed');
+```
+
+### 数组
+
+- 使用字面量创建数组
+```
+//bad
+var a= new Array();
+//good
+var a = [];
+```
+- 使用push方法添加数组项
+```var a =[];
+//bad
+a[a.length] = 'style guide';
+//good
+a.push('style guide');
+```
+- 使用slice方法复制数组
+```
+var a = [1,3,5,7,9];
+var copyA= [];
+var len = a.length;
+var i ;
+//bad
+for(i =0;i<leng;i++){
+    copyA[i] = a[i];
+}
+//good
+copyA = a.splice();
+```
+- 使用slice方法将类数组转换成数组
+```
+function trigger(){
+    var args=Array.prototype.sloce.call(arguments);
+}
+```
+### 字符串使用单引号
+```
+//bad
+var name = "bob";
+var fullname = "bob"+this.lastName;
+//good
+var fullName='jack'
+var fullName = 'jack'+this.lastName;
+```
+- 长字符串应该通过字符串链接多行书写
+```
+//bad
+var Msg = 'abcdefghijklmnopqrstuvwxyzzyxwvutsrqponmlkjihgfedcba';
+//good
+var Msg = 'abcdefghijklmnopqrstuvwxyz'+'abcdefghijklmnopqrstuvwxyz'
+```
+- 当以编程方式创建字符串时，应该使用join方法而不是使用字符串连接
+```
+var items;
+var messages;
+var length;
+var i;
+
+message = [{
+    state:'success',
+    message:'this one worked'
+},{
+    state:'success',
+    message:'this one worked as well,'
+},{
+    state:'error',
+    message:'this one did not work.'
+}];
+length = message.length;
+//bad
+function inbox(message){
+    items = '<ul>';
+
+    for(i = 0;i<length;i++){
+        items +='<li>' + messages[i].message +'</li>';
+    }
+}
+//good
+function inbox(message){
+    items =[];
+    for(i =0;i<length;i++){
+        items[i] = '<li>' + messages[i].message + '</li>';
+    }
+    return '<ul>' + items.join('') + '</ul>';
+}
+```
