@@ -12,7 +12,7 @@ tags: 博客
  - 命名具有描述性
 
 
-``
+```
     //bab
     function q(){
         //body
@@ -20,5 +20,74 @@ tags: 博客
     //good
     function query(){
         //body
-    }
-``
+    } 
+```
+ - 驼峰式的命名对象、函数、实例
+
+```
+//bad
+var OBJTaaaa ={};
+var this_is_my_demo = {};
+var o = {};
+function c(){};
+//good
+var thisIsMyDemo = {};
+function thisIsMyFunction(){}; 
+```
+
+ - 构造函数时首字母大写
+```
+//bad
+function user(key){
+    this.name = key.name;
+} 
+var bad = new user({
+    name:'ysl'
+});
+//good
+function User(key){
+    this.name = key.name;
+}
+var good = new User({
+    name:'ysl'
+});
+```
+
+ - 定义私有属性时以下横线_开头
+ ```
+ //bad 
+ this.__name='ysl';
+ this.name_='ysl';
+ //good
+ this._name='ysl';
+```
+ - 使用self来保存this引用
+ ```
+ //bad
+ function (){
+     var _this = this;
+     return function (){
+         console.log(_this);
+     };
+ }
+ //good
+ function (){
+     var self = this;
+     return function(){
+         console.log(self);
+     }
+ }
+ ```
+
+ - 尽可能的使用命名函数
+ ```
+ //bad
+ var log = function (msg){
+     console.log(msg)
+ };
+ //good
+ var log = function log(msg){
+     console.log(msg);
+ }
+ ```
+ ### 变量
