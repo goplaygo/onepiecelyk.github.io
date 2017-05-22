@@ -11,8 +11,8 @@ tags: 博客
 
  - 命名具有描述性
 
+
 ``
-    
     //bab
     function q(){
         //body
@@ -20,7 +20,5 @@ tags: 博客
     //good
     function query(){
         //body
-    }  
+    }
 ``
- - 
-
