@@ -12,7 +12,7 @@ tags: 博客
  - 命名具有描述性
 
 
-```
+ ```
     //bab
     function q(){
         //body
@@ -21,37 +21,37 @@ tags: 博客
     function query(){
         //body
     } 
-```
+ ```
  - 驼峰式的命名对象、函数、实例
 
-```
-//bad
-var OBJTaaaa ={};
-var this_is_my_demo = {};
-var o = {};
-function c(){};
-//good
-var thisIsMyDemo = {};
-function thisIsMyFunction(){}; 
-```
+ ```
+ //bad
+ var OBJTaaaa ={};
+ var this_is_my_demo = {};
+ var o = {};
+ function c(){};
+ //good
+ var thisIsMyDemo = {};
+ function thisIsMyFunction(){}; 
+ ```
 
  - 构造函数时首字母大写
-```
-//bad
-function user(key){
+ ```
+ //bad
+ function user(key){
     this.name = key.name;
-} 
-var bad = new user({
+ } 
+ var bad = new user({
     name:'ysl'
-});
-//good
-function User(key){
+ });
+ //good
+ function User(key){
     this.name = key.name;
-}
-var good = new User({
+ }
+ var good = new User({
     name:'ysl'
-});
-```
+ });
+ ```
 
  - 定义私有属性时以下横线_开头
  ```
@@ -91,3 +91,21 @@ var good = new User({
  }
  ```
  ### 变量
+ - 永远使用var关键字来声明变量
+```
+//bad
+superMsg = new SuperMsg();
+//good
+var superMsg = new superMsg();
+```
+ - 对每一个变量单独使用var声明
+ ```
+ //bad
+ var items = getItems();
+     goSportSteam = true;
+     dragonball = 'y';
+//good
+var itrems = getItems();
+var goSportsTeam = true;
+var dragonball = 'z';   
+ ```
