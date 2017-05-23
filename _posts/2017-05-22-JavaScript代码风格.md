@@ -13,14 +13,14 @@ tags: 博客
 
 
  ```
-    //bab
-    function q(){
-        //body
-    };
-    //good
-    function query(){
-        //body
-    } 
+//bab
+function q(){
+    //body
+};
+//good
+function query(){
+    //body
+} 
  ```
  - 驼峰式的命名对象、函数、实例
 
@@ -55,40 +55,40 @@ tags: 博客
 
 - 定义私有属性时以下横线_开头
 ```
- //bad 
- this.__name='ysl';
- this.name_='ysl';
- //good
- this._name='ysl';
+//bad 
+this.__name='ysl';
+this.name_='ysl';
+//good
+this._name='ysl';
 ```
 - 使用self来保存this引用
 ```
- //bad
- function (){
-     var _this = this;
-     return function (){
-         console.log(_this);
-     };
- }
- //good
- function (){
-     var self = this;
-     return function(){
-         console.log(self);
-     }
- }
+//bad
+function (){
+    var _this = this;
+    return function (){
+        console.log(_this);
+    };
+}
+//good
+function (){
+    var self = this;
+    return function(){
+        console.log(self);
+    }
+}
 ```
 
 - 尽可能的使用命名函数
 ```
- //bad
- var log = function (msg){
-     console.log(msg)
- };
- //good
- var log = function log(msg){
-     console.log(msg);
- }
+//bad
+var log = function (msg){
+    console.log(msg)
+};
+//good
+var log = function log(msg){
+    console.log(msg);
+}
 ```
 ### 变量
 - 永远使用var关键字来声明变量
@@ -100,10 +100,10 @@ var superMsg = new superMsg();
 ```
 - 对每一个变量单独使用var声明
 ```
- //bad
- var items = getItems();
-     goSportSteam = true;
-     dragonball = 'y';
+//bad
+var items = getItems();
+    goSportSteam = true;
+    dragonball = 'y';
 //good
 var itrems = getItems();
 var goSportsTeam = true;
@@ -209,6 +209,7 @@ var person = {
 ```
 
 ### 属性
+
 - 用点号访问属性
 ```
 var lu = {
