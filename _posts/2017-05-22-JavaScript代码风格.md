@@ -451,6 +451,7 @@ return bar;
 ### 分号
 
 - 自执行函数后加分号
+
 ```
 //bad
 (function (){
