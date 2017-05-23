@@ -35,8 +35,8 @@ tags: 博客
  function thisIsMyFunction(){}; 
  ```
 
- - 构造函数时首字母大写
- ```
+- 构造函数时首字母大写
+```
  //bad
  function user(key){
     this.name = key.name;
@@ -51,18 +51,18 @@ tags: 博客
  var good = new User({
     name:'ysl'
  });
- ```
+```
 
- - 定义私有属性时以下横线_开头
- ```
+- 定义私有属性时以下横线_开头
+```
  //bad 
  this.__name='ysl';
  this.name_='ysl';
  //good
  this._name='ysl';
 ```
- - 使用self来保存this引用
- ```
+- 使用self来保存this引用
+```
  //bad
  function (){
      var _this = this;
@@ -77,10 +77,10 @@ tags: 博客
          console.log(self);
      }
  }
- ```
+```
 
- - 尽可能的使用命名函数
- ```
+- 尽可能的使用命名函数
+```
  //bad
  var log = function (msg){
      console.log(msg)
@@ -89,17 +89,17 @@ tags: 博客
  var log = function log(msg){
      console.log(msg);
  }
- ```
- ### 变量
- - 永远使用var关键字来声明变量
+```
+### 变量
+- 永远使用var关键字来声明变量
 ```
 //bad
 superMsg = new SuperMsg();
 //good
 var superMsg = new superMsg();
 ```
- - 对每一个变量单独使用var声明
- ```
+- 对每一个变量单独使用var声明
+```
  //bad
  var items = getItems();
      goSportSteam = true;
@@ -109,7 +109,7 @@ var itrems = getItems();
 var goSportsTeam = true;
 var dragonball = 'z';   
 ```
- - 未赋值变量最后声明
+- 未赋值变量最后声明
 ```
 //bad
 var i ,len,dragonball,items = getItems(),goSportsTeam = true;
@@ -207,6 +207,7 @@ var person = {
     type:'guide'
 }
 ```
+
 ### 属性
 - 用点号访问属性
 ```
@@ -241,7 +242,8 @@ var a= new Array();
 var a = [];
 ```
 - 使用push方法添加数组项
-```var a =[];
+```
+var a =[];
 //bad
 a[a.length] = 'style guide';
 //good
@@ -283,6 +285,7 @@ var Msg = 'abcdefghijklmnopqrstuvwxyzzyxwvutsrqponmlkjihgfedcba';
 var Msg = 'abcdefghijklmnopqrstuvwxyz'+'abcdefghijklmnopqrstuvwxyz'
 ```
 - 当以编程方式创建字符串时，应该使用join方法而不是使用字符串连接
+
 ```
 var items;
 var messages;
@@ -300,6 +303,7 @@ message = [{
     message:'this one did not work.'
 }];
 length = message.length;
+
 //bad
 function inbox(message){
     items = '<ul>';
