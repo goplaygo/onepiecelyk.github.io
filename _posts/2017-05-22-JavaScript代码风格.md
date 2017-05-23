@@ -522,6 +522,7 @@ var noAge = !!age;
 ### 存取器
 
 - 使用存取器的方法存取值
+
 ```
 //bad 
 dog.name();
@@ -572,9 +573,9 @@ fran.prototype.block = function block() {
 }
 ```
 
-### Jquery
+### JQuery
 
-- Jquery对象变量前加前缀$
+- JQuery对象变量前加前缀$
 
 ```
 //bad
