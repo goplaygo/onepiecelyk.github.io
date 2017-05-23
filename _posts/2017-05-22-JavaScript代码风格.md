@@ -11,7 +11,6 @@ tags: 博客
 
 - 命名具有描述性
 
-
 ```
 //bab
 function q(){
@@ -34,7 +33,6 @@ function c(){};
 var thisIsMyDemo = {};
 function thisIsMyFunction(){}; 
 ```
-
 - 构造函数时首字母大写
 ```
 //bad
@@ -52,7 +50,6 @@ var good = new User({
 name:'ysl'
 });
 ```
-
 - 定义私有属性时以下横线_开头
 ```
 //bad 
@@ -78,7 +75,6 @@ console.log(self);
 }
 }
 ```
-
 - 尽可能的使用命名函数
 ```
 //bad
@@ -126,8 +122,7 @@ var dragonball;
 var length;
 var i;
 ```
-- 
-在作用域顶部声明变量
+- 在作用域顶部声明变量
 ```
 //bad
 function (){
@@ -170,9 +165,7 @@ this.setFirstName(name);
 return true;
 }
 ```
-
 ### 对象
-
 - 使用对象字面量创建对象
 ```
 //bad 
@@ -207,9 +200,7 @@ var person = {
 type:'guide'
 }
 ```
-
 ### 属性
-
 - 用点号访问属性
 ```
 var lu = {
@@ -232,9 +223,7 @@ return luke[prop];
 }
 var isJed = getProp('jed');
 ```
-
 ### 数组
-
 - 使用字面量创建数组
 ```
 //bad
@@ -286,13 +275,11 @@ var Msg = 'abcdefghijklmnopqrstuvwxyzzyxwvutsrqponmlkjihgfedcba';
 var Msg = 'abcdefghijklmnopqrstuvwxyz'+'abcdefghijklmnopqrstuvwxyz'
 ```
 - 当以编程方式创建字符串时，应该使用join方法而不是使用字符串连接
-
 ```
 var items;
 var messages;
 var length;
 var i;
-
 message = [{
 state:'success',
 message:'this one worked'
@@ -304,11 +291,9 @@ state:'error',
 message:'this one did not work.'
 }];
 length = message.length;
-
 //bad
 function inbox(message){
 items = '<ul>';
-
 for(i = 0;i<length;i++){
 items +='<li>' + messages[i].message +'</li>';
 }
