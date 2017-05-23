@@ -449,6 +449,7 @@ return bar;
 ```
 
 ### 分号
+
 - 自执行函数后加分号
 ```
 //bad
@@ -463,15 +464,20 @@ return bar;
     return name;
 })();
 ```
+
 - 每条代码语句后加分号
+
 ```
 //bad
 var name ='style'
 //good
 var name ='style';
 ```
+
 ### 强制转换
+
 - 类型转换放在代码语句前面
+
 ```
 // => this.reviewScore = 9;
 
@@ -484,7 +490,9 @@ var totalScore = '' + this.reviewScore + 'total score';
 //good
 var totalScore = this.reviewScore + 'totel score';
 ```
+
 - 使用parsetInt数值转换时，总是声明转换进制
+
 ```
 var value = '4';
 //bad
@@ -496,8 +504,10 @@ var val = parsetInt(value);
 //good
 var val = Number(value);
 var val = parsetInt(value,10);
+
 ```
 - Boolean值转换
+
 ```
 var age = 0;
 //bad 
@@ -507,7 +517,9 @@ var hasAge = new Boolean(age);
 var hasAge = Boolean(age);
 var noAge = !!age;
 ```
+
 ### 存取器
+
 - 使用存取器的方法存取值
 ```
 //bad 
@@ -518,7 +530,9 @@ dog.name('wang');
 dog.getName();
 god.setName('wang');
 ```
+
 - 返回boolean值的方法用isVal()或hasVal()形式
+
 ```
 //bad
 if(!dog.name) {
@@ -528,7 +542,9 @@ if(!dog.hasName()) {
     return false;
 }
 ```
--不要重写构造函数原型
+
+- 不要重写构造函数原型
+
 ```
 function fran() {
     console.log('new fr');
@@ -554,8 +570,11 @@ fran.prototype.block = function block() {
     console.log('block');
 }
 ```
+
 ### Jquery
+
 - Jquery对象变量前加前缀$
+
 ```
 //bad
 var sidebar = $('.sidebar');
@@ -563,7 +582,9 @@ var sidebar = $('.sidebar');
 //good
 var $sidebar = $('.sidebar');
 ```
+
 - 混存DOM查询
+
 ```
 //bad
 function setSidebar() {
