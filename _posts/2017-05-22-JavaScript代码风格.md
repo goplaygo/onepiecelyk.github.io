@@ -9,48 +9,48 @@ tags: 博客
 
 ### 命名约定
 
- - 命名具有描述性
+- 命名具有描述性
 
 
- ```
+```
 //bab
 function q(){
-    //body
+//body
 };
 //good
 function query(){
-    //body
+//body
 } 
- ```
- - 驼峰式的命名对象、函数、实例
+```
+- 驼峰式的命名对象、函数、实例
 
- ```
- //bad
- var OBJTaaaa ={};
- var this_is_my_demo = {};
- var o = {};
- function c(){};
- //good
- var thisIsMyDemo = {};
- function thisIsMyFunction(){}; 
- ```
+```
+//bad
+var OBJTaaaa ={};
+var this_is_my_demo = {};
+var o = {};
+function c(){};
+//good
+var thisIsMyDemo = {};
+function thisIsMyFunction(){}; 
+```
 
 - 构造函数时首字母大写
 ```
- //bad
- function user(key){
-    this.name = key.name;
- } 
- var bad = new user({
-    name:'ysl'
- });
- //good
- function User(key){
-    this.name = key.name;
- }
- var good = new User({
-    name:'ysl'
- });
+//bad
+function user(key){
+this.name = key.name;
+} 
+var bad = new user({
+name:'ysl'
+});
+//good
+function User(key){
+this.name = key.name;
+}
+var good = new User({
+name:'ysl'
+});
 ```
 
 - 定义私有属性时以下横线_开头
@@ -65,17 +65,17 @@ this._name='ysl';
 ```
 //bad
 function (){
-    var _this = this;
-    return function (){
-        console.log(_this);
-    };
+var _this = this;
+return function (){
+console.log(_this);
+};
 }
 //good
 function (){
-    var self = this;
-    return function(){
-        console.log(self);
-    }
+var self = this;
+return function(){
+console.log(self);
+}
 }
 ```
 
@@ -83,11 +83,11 @@ function (){
 ```
 //bad
 var log = function (msg){
-    console.log(msg)
+console.log(msg)
 };
 //good
 var log = function log(msg){
-    console.log(msg);
+console.log(msg);
 }
 ```
 ### 变量
@@ -102,8 +102,8 @@ var superMsg = new superMsg();
 ```
 //bad
 var items = getItems();
-    goSportSteam = true;
-    dragonball = 'y';
+goSportSteam = true;
+dragonball = 'y';
 //good
 var itrems = getItems();
 var goSportsTeam = true;
@@ -131,43 +131,43 @@ var i;
 ```
 //bad
 function (){
-    test();
-    console.log('do something');
-    // other 
-    var name = getName();
-     if(name =='test'){
-         return name;
-     }
+test();
+console.log('do something');
+// other 
+var name = getName();
+if(name =='test'){
+return name;
+}
 }
 //good
 function (){
-    var name = getName();
-    test();
-    console.log('do something');
-    //other
-    if(name =='test'){
-        return false;
-    }
-    return name;
+var name = getName();
+test();
+console.log('do something');
+//other
+if(name =='test'){
+return false;
+}
+return name;
 }
 //bad
 function (){
-    var name = getName();
-    if(!argument.length){
-        return false;
-    }
-    this.setFirstName(name);
-    return true;
+var name = getName();
+if(!argument.length){
+return false;
+}
+this.setFirstName(name);
+return true;
 }
 //good
 function (){
-    var name;
-    if(!arguments.length){
-        return false;
-    }
-    name = getName();
-    this.setFirstName(name);
-    return true;
+var name;
+if(!arguments.length){
+return false;
+}
+name = getName();
+this.setFirstName(name);
+return true;
 }
 ```
 
@@ -183,28 +183,28 @@ var person ={};
 - 不使用保留字做对象属性
 ```//bad
 var person = {
-    nama:'style',
-    private:true;
+nama:'style',
+private:true;
 }
 //good
 var person ={
-    name:'style',
-    self:true;
+name:'style',
+self:true;
 }
 ```
 - 使用可读性的同义词代替保留字
 ```
 //bad
 var person = {
-    class:'guide'
+class:'guide'
 };
 //bad
 var person = {
-    klass:'guide'
+klass:'guide'
 };
 //good
 var person = {
-    type:'guide'
+type:'guide'
 }
 ```
 
@@ -213,8 +213,8 @@ var person = {
 - 用点号访问属性
 ```
 var lu = {
-    jjj:true,
-    name:24
+jjj:true,
+name:24
 };
 //bad
 var isjj:lu['jjj'];
@@ -224,11 +224,11 @@ var isjj:lu.jjj;
 - 通过变量访问对象属性时使用中括号
 ```
 var luke={
-    jed:true,
-    age:24
+jed:true,
+age:24
 };
 function getProp(prop){
-    return luke[prop];
+return luke[prop];
 }
 var isJed = getProp('jed');
 ```
@@ -258,7 +258,7 @@ var len = a.length;
 var i ;
 //bad
 for(i =0;i<leng;i++){
-    copyA[i] = a[i];
+copyA[i] = a[i];
 }
 //good
 copyA = a.splice();
@@ -266,7 +266,7 @@ copyA = a.splice();
 - 使用slice方法将类数组转换成数组
 ```
 function trigger(){
-    var args=Array.prototype.sloce.call(arguments);
+var args=Array.prototype.sloce.call(arguments);
 }
 ```
 ### 字符串使用单引号
@@ -294,31 +294,31 @@ var length;
 var i;
 
 message = [{
-    state:'success',
-    message:'this one worked'
+state:'success',
+message:'this one worked'
 },{
-    state:'success',
-    message:'this one worked as well,'
+state:'success',
+message:'this one worked as well,'
 },{
-    state:'error',
-    message:'this one did not work.'
+state:'error',
+message:'this one did not work.'
 }];
 length = message.length;
 
 //bad
 function inbox(message){
-    items = '<ul>';
+items = '<ul>';
 
-    for(i = 0;i<length;i++){
-        items +='<li>' + messages[i].message +'</li>';
-    }
+for(i = 0;i<length;i++){
+items +='<li>' + messages[i].message +'</li>';
+}
 }
 //good
 function inbox(message){
-    items =[];
-    for(i =0;i<length;i++){
-        items[i] = '<li>' + messages[i].message + '</li>';
-    }
-    return '<ul>' + items.join('') + '</ul>';
+items =[];
+for(i =0;i<length;i++){
+items[i] = '<li>' + messages[i].message + '</li>';
+}
+return '<ul>' + items.join('') + '</ul>';
 }
 ```
