@@ -1,11 +1,11 @@
 ---
 layout: post
-title: 2016年总结
-date: 2017-01-10 
+title: JavaScript常见算法总结
+date: 2017-05-31 
 tags: JavaSctipt   
 ---
 
-### JavaScript面试中常见算法总结
+### JavaScript常见算法总结
 
 
 
