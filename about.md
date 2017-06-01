@@ -5,12 +5,12 @@ title: 关于我
 
 ![](/images/posts/生活/lyk.jpeg)
 
-Hello，Everyone，My name is Liyuyukun ,Graduated from Henan University,majoring in computer science and technology. Now living in Shanghai Pudong New Area.
+Hello，Everyone，My name is Liyuyukun , you also can call me Francis ,Graduated from Henan University,majoring in computer science and technology. Now living in Shanghai Pudong New Area.
 
 
 ### 实习经历
 
-1)我现在在恺英网络VR项目组做前端实习生[恺英网络VR组](http://www.vronline.com/) ,之前是做vronline官网的一些页面，并与设计和后台php进行交流进行编写。并编写[开放平台](open.vronline.com)。同时也编写公司内部页游推荐的相关页面。
+1)我在恺英网络VR项目组做前端实习生[恺英网络VR组](http://www.vronline.com/) ,之前是做vronline官网的一些页面，并与设计和后台php进行交流进行编写。并编写[开放平台](open.vronline.com)。同时也编写公司内部页游推荐的相关页面。
 
 2)在2016年6月至9月期间在万达金融集团 [快钱COC-FE组](https://www.99bill.com/)实习,主要是做官网页面的编写与修改，同时对公司内CMS系统需要修改的进行修改。
 后期也在快钱APP里运用Hybrid方式进行编写页面。
