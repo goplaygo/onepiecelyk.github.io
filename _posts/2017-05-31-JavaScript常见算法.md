@@ -56,6 +56,53 @@ function BubbleSort(arr){
     return arr;
 }
  ``` 
+但是冒泡排序的时间复杂度太大了，如果元素多的话，会占用很长时间，所以前人就对冒泡排序进行了两种优化，主要思想是：
+ - 第一种是设置一个一个标志位聊标记是否发生变化，如果没有交换就提前结束；
+ - 第二种是记录最后发生交换的位置，作为下一趟比较结束的位置。
+
+ 代码实现如下：
+
+ ```
+ //第一种
+ function BubbleSort1(arr,n){
+    var flag;
+    var temp;
+    for(var i = 0;i<n;++i){
+        var flag = 0;
+        for(var j =0;j< n-1-i; ++j){
+            if(arr[j]<arr[j+1]){
+                flag = 1;
+                temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j + 1] = temp;
+            }
+        }
+        if(flag === 0){
+            break;
+        }
+    }
+ }
+ //第二种
+ function BubbleSort2(arr,n){
+     var temp;
+     var flag = n;
+     for(var i = 0; i<flag;++i){
+         var k =flag;
+         var flag =0;
+         for(var j = 0;j = k;++j){
+            if(arr[j] < arr[j + 1]){
+                flag = j;
+                temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp
+            }
+         }
+     }
+ }
+ ```
+ 使用优化后的冒泡排序后，就是时间复杂度大大减少了
+
+ ### 快速排序
 
 
 
