@@ -3,24 +3,14 @@ layout: page
 title: 关于我 
 ---
 
-**你好，我叫*刘御锟*，来自河南大学计算机科学与技术专业。**
+![](/images/posts/生活/lyk.jpeg)
 
-### 个人信息
-
- - 居住地址： 上海市浦东新区
-
- - 联系电话： 13761309067
-
- - 邮箱： liuyukunsuper@gmail.com
-
- - 籍贯： 河南省
-
- - github：https://onepiecelyk.github.io
+Hello，Everyone，My name is Liyuyukun ,Graduated from Henan University,majoring in computer science and technology. Now living in Shanghai Pudong New Area.
 
 
 ### 实习经历
 
-1)我现在在恺英网络VR项目组做前端实习生[恺英网络VR组](http://www.vronline.com/) ,之前是做vronline官网的一些页面，并与设计和后台php进行交流进行编写。并编写[开放平台](open.vronline.com)的一些页面。同时也编写公司内部页游推荐的相关页面。
+1)我现在在恺英网络VR项目组做前端实习生[恺英网络VR组](http://www.vronline.com/) ,之前是做vronline官网的一些页面，并与设计和后台php进行交流进行编写。并编写[开放平台](open.vronline.com)。同时也编写公司内部页游推荐的相关页面。
 
 2)在2016年6月至9月期间在万达金融集团 [快钱COC-FE组](https://www.99bill.com/)实习,主要是做官网页面的编写与修改，同时对公司内CMS系统需要修改的进行修改。
 后期也在快钱APP里运用Hybrid方式进行编写页面。
@@ -43,6 +33,13 @@ title: 关于我
 
 爱生活，爱运动，喜欢跑步，健身，平时空闲时喜欢打乒乓球，因为乒乓球结交了很多好友，也认识不少外国友人，自认为勤奋好学，喜欢新知识，喜欢探索，具有良好的沟通和团队合作精神，对互联网有浓厚的兴趣和热情，坚信好的互联网产品能够营造美好的生活。
 
+
+![](/images/posts/生活/3.jpeg)
+![](/images/posts/生活/1.jpeg)
+这是我和国外朋友一起参加的上海市春季运动会时一起合照的。
+
+![](/images/posts/生活/2.jpeg)
+这是我和国外朋友一起参加的乒乓球比赛时照的。
 
 
 {% include comments.html %}
