@@ -36,8 +36,6 @@ Hello，Everyone，My name is Liyuyukun ,Graduated from Henan University,majori
 
 ![](/images/posts/生活/3.jpeg)
 ![](/images/posts/生活/1.jpeg)
-这是我和国外朋友一起参加的上海市春季运动会时一起合照的。
-
 ![](/images/posts/生活/2.jpeg)
 这是我和国外朋友一起参加的乒乓球比赛时照的。
 
