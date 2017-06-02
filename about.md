@@ -5,7 +5,7 @@ title: 关于我
 
 ![](/images/posts/生活/lyk.jpeg)
 
-Hello，Everyone，My name is Liyuyukun , you also can call me Francis ,Graduated from Henan University,majoring in computer science and technology. Now living in Shanghai Pudong New Area.
+Hello，Everyone，My name is Liuyukun , you also can call me Francis , I Graduated from Henan University,majoring in computer science and technology. Now living in Shanghai Pudong New Area.
 
 
 ### 实习经历
@@ -28,6 +28,7 @@ Hello，Everyone，My name is Liyuyukun , you also can call me Francis ,Graduat
  - 大一时，积极参与班级各项事务，于是在大二评选时获得优秀学生称号，并且学习成绩较好，获得国家励志奖学金。
  - 大二时，因为参加学校河南省大学生运动会乒乓球项目选拔获得第三名进入校队，并与队友在赛场上获得团体第九名的成绩，单打进入32强。
  - 大三时，参加学院组织的河南大学甲骨文夏令营，去北京参观甲骨文云计算中心，了解了大数据时代的相关专业知识。
+ - 大四时，因为想着早点就业就，出来找实习的工作了。
 
 ### 自我评价
 
