@@ -2,7 +2,7 @@
 layout: post
 title: JavaScript常见算法
 date: 2017-05-31 
-tags: 博客   
+tags: Javascript   
 ---
 
 ### JavaScript常见算法总结
