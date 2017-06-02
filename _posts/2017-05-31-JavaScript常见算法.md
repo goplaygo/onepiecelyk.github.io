@@ -1,8 +1,8 @@
 ---
 layout: post
-title: JavaScript常见算法总结
+title: JavaScript常见算法
 date: 2017-05-31 
-tags: JavaSctipt   
+tags: 博客   
 ---
 
 ### JavaScript常见算法总结
