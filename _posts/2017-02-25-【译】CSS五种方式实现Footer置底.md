@@ -2,7 +2,7 @@
 layout: post
 title: 【译】CSS五种方式实现Footer置底
 date: 2017-02-25 
-tags: 博客   
+tags: CSS  
 ---
 
 ### 随笔
