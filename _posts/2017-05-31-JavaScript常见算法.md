@@ -38,7 +38,7 @@ tags: Javascript
 
 ![](/images/posts/算法/冒泡排序.gif)
 
- **代码实现**
+ **代码实现**（代码来自网上）
  ```
 function BubbleSort(arr){
     var i = arr.length,j;
@@ -124,7 +124,7 @@ function BubbleSort(arr){
 
 ![](/images/posts/算法/快速排序.gif)
 
- **代码实现**
+ **代码实现**（代码来自阮一峰老师网站）
 ```
 var quickSort = function (arr){
     if(arr.length <=1) {return arr;}
@@ -143,3 +143,98 @@ var quickSort = function (arr){
 }
 ```
 
+### 堆排序
+
+堆排序（Headpsort）是指利用堆积树这种数据结构所设计的一种排序算法，发明人是罗伯特·弗洛伊德，它是选择排序的一种。可以利用数组的特点快速定位索引的元素。堆分为大根堆和小根堆，是完全二叉树。
+
+**算法步骤**
+
+ - 创建一个堆H[0...n-1];
+ - 把堆首（最大值）和堆尾互换。
+ - 把堆的尺寸缩小1，并调用shift_down（0），目的是把新的数组顶端数据调整到相应位置。
+ - 重复步骤2，直到堆的尺寸为1
+
+ **时间复杂度和空间复杂度**
+
+ 时间复杂度为：O(nlgon);
+ 空间复杂度：O(1);
+
+**冒泡排序动态图展示**
+
+![](/images/posts/算法/堆排序.gif)
+
+**代码展示**
+
+```
+var h = [];//用来存放堆的数组
+var n ;//用来存储堆中元素的个数，也是堆的大小。
+//交换函数，交换堆中两个元素的值
+function swap(x,y){
+    var t;
+    t = h[x];
+    h[x] = h[y];
+    h[y] = t;
+}
+//向下调整函数
+function siftdown(i){
+    //传入一个需要向下调整的节点编号i，这里传入1，即从堆的定点开始向下调整
+    var flag = 0,
+    var t;
+    //当i节点有儿子（至少有个左儿子）并且继续调整的时候循环执行
+    while(i*2 <=n && flag === 0){
+        //首先判断它和左儿子的关系，并用t记录值较小的节点编号
+        var leftChidrenIndex = i * 2 + 1 ,
+        var rightChildrenIndex = i * 2 + 2;
+        if(h[i] > h[leftChidrenIndex]){
+            t = leftChidrenIndex;
+        } else {
+            t = i;
+        }
+        //如果他有右儿子，在右儿子进行讨论
+        if(rightChildrenIndex <= n){
+            //如果右儿子的值更小，更新较小的节点编号
+            if(h[t] >h[rightChildrenIndex]){
+                t = rightChildrenIndex;
+            }
+        }
+        //如果发现最小的节点编号不是自己，说明子节点中有比父节点更小的
+        if(t !== i){
+            swap(t,i);//交换他们
+            i = t;
+        } else {
+            flag = 1;
+        }
+    }
+}
+//建立堆函数
+function heap() {
+    var i;
+    for(i = n/2 ;i>=0;i--){
+        siftdown(i);
+    }
+    console.error(h);
+}
+//删除最大元素
+function deleteMax(){
+    var t ;
+    t =h[0];//用一个临时变量记录堆顶点的值
+    comnsole.info(t);
+    h[0] =h[n];//将堆的最后一个点赋值到堆顶！
+    n--;
+    siftdown(0);//向下调整（相当于重新建造堆）
+    return t;
+}
+function heapsort (arr) {
+    h = arr;
+    var num = arr.length;
+    var i;
+    n = num - 1;
+    //建堆
+    heap();
+    var sortArr=[];
+    for(i =0; i<=num;i++){
+        sortArr.push(deleteMax());
+    }
+    return sortArr;
+}
+```
