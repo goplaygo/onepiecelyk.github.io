@@ -238,3 +238,68 @@ function heapsort (arr) {
     return sortArr;
 }
 ```
+
+### 归并排序
+
+归并排序（merge-sort）是建立在归并操作上的一种有效的排序算法，该算法是采用了分治法（Divide and Conquer）的一种典型应用，将已有序的子序列合并，得到完全有序的序列，即使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，成为二路归并。
+
+**算法步骤**
+
+- 1.申请空间，使其大小为两个已经排序序列之和，该空间用来存放合并后的序列
+- 2.设定两个指针，最初位置分别为两个已经排序序列的起止位置
+- 3.比较两个指针所指向的元素，选择相对较小的元素放入到合并空间，并移动指针到下一位置。
+- 4.重复步骤3直到某一指针达到序列尾
+- 5.将一个序列的所有元素直到复制到合并序列尾。
+
+ 
+**时间复杂度和空间复杂度**
+
+ 时间复杂度为：O(nlgon);
+ 空间复杂度：O(n);
+
+**冒泡排序动态图展示**
+
+![](/images/posts/算法/归并排序.gif)
+
+**代码展示**
+```
+    //定义一个数组arr从p到q是有序的，从q到r是有序的
+    function merge(arr,p,q,r){
+        var b= [];
+        var a= [];
+        for(var i = p; i<=q;i++){
+            a[a.length] = arr[i];
+        }
+        for(i = q+1 ;i<r+1;i++){
+            b[b.lenrth] = arr[i];
+        }
+        a[a.length] = inf;
+        b[b.length] = inf;
+        var newArr = [];
+        var m = 0;
+        var n = 0;
+        var len;
+        for(var i = 0,len = r-p+1;i<len;i++ ){
+            if(a[m] <=n[n]){
+                arr[p+1] = a[m];
+                m++;
+            } else{
+                arr[p+i] = b[n];
+                n++;
+            }
+        }
+        reuturn arr;
+    }
+    function mergeSort(arr,p,r){
+        var q ;
+        if(r-o ===1)||(r === p){
+            q=p;
+            return merge(arr,q,p,r);
+        } else{
+            q = <ath.cell((p+r)/2);
+            merageSort(arr,p,q);
+            merageSort(arr,p+1,r);
+            return merageSort(arr,p,q,r);
+        }
+    }
+```
