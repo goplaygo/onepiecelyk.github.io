@@ -303,3 +303,27 @@ function heapsort (arr) {
         }
     }
 ```
+
+### 二分查找算法
+
+二分查找算法是一种在有序数组中查找某一特定元素的搜索算法，搜索过程中从数组的中间元素开始，如果中间元素正是要找的元素，则搜索结束，如果某一特定元素大约或小于中间元素，则在数组大于或小于中间元素的那一半中查找，而且跟开始一样从中间元素开始比较，如果在某一步步骤数组为空，则代表找不到，这种搜索算法每一次比较使搜索范围缩小一半，折半查找每次把搜索区区域减少一半，时间复杂度为O(logn)。
+
+**代码实现**
+
+```
+function helfSearch(arr,num){
+    var len = arr.length;
+    var middle = Math.floor(len/2);
+    var mNum arr[middle];
+
+    if(len === 0) {
+        return null;
+    } else if (mNum === num){
+        return middle;
+    } else if (mNum > num ){
+        return helfSearch(arr.alice(0,middle),num);
+    } else {
+        return helfSearch(arr.slice(middle + 1 ),num);
+    }
+}
+```
