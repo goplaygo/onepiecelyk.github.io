@@ -2,7 +2,7 @@
 layout: post
 title: JavaScript常见算法
 date: 2017-05-31 
-tags: Javascript   
+tags: JavaScript   
 ---
 
 ### JavaScript常见算法总结
@@ -327,3 +327,22 @@ function helfSearch(arr,num){
     }
 }
 ```
+
+#### 常见面试题
+
+**JavaScript 变量提升**
+
+JavaScript是将所有的声明提升到当前作用域的顶部。这也就意味着我们可以在某个变量声明前就使用该变量，不过虽然 JavaScript 会将声明提升到顶部，但是并不会执行真的初始化过程。
+
+**什么是事件冒泡以及如何避免**
+
+Event Bubbling 即指某个事件不仅会触发当前元素，还会以嵌套顺序传递到父元素中。直观而言就是对于某个子元素的点击事件同样会被父元素的点击事件处理器捕获。避免 Event Bubbling 的方式可以使用event.stopPropagation() 或者 IE 9 以下使用event.cancelBubble。
+
+**== 和 === 的区别**
+
+===代表严格比较，并且比较的是值与类型，不仅仅来比较值。
+
+**null和undefined的区别**
+
+在JavaScript中，null是一个可以被分配的值，设置为null的变量意味着无值，undefined代表声明了对象但是还未进行赋值。
+
