@@ -402,3 +402,19 @@ funnction unquiedArray(Array) {
 }
 
 ```
+
+*颠倒字符串*
+
+```
+const string = 'Welcome to this JavaScript Guide';
+
+// Output becomes !ediuG tpircsavaJ siht ot emocleW
+var reverseEntireSentence = reverseBySeparator(string, "");
+
+// Output becomes emocleW ot siht tpircsavaJ !ediuG
+var reverseEachWord = reverseBySeparator(reverseEntireSentence, " ");
+ 
+function reverseBySeparator(string, separator) {
+  return string.split(separator).reverse().join(separator);
+}
+```
