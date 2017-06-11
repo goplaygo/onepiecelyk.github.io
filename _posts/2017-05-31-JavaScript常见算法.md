@@ -418,3 +418,59 @@ function reverseBySeparator(string, separator) {
   return string.split(separator).reverse().join(separator);
 }
 ```
+
+**栈与队列**
+
+使用两个栈进行出栈与入栈
+
+```
+let inputStack=[];
+let outputStack = [];
+
+function enqueue(stackInput,item) {
+    return stackInput.push(item);
+}
+
+function dequeue(stackInput,stackOutput){
+    if(stackOutput.length <=0){
+        while(stackInput.length>0){
+            let elementToOutput = stackInput.pop();
+            stackOutput.push(elementToOut);
+        }
+    }
+    return stackOutput.pop();
+}
+```
+
+**函数判断大括号是否闭合**
+
+```
+let expression = '{{}{}{}}';
+let expressionFalse = '{{}{}{}';
+
+isBalanced(expression);//true
+isBalanced(expressionFalse);//false
+isBalanced("");//false
+
+function isBalanced(expression) {
+    let checkString = expression;
+    let stack=[];
+
+    if(checkString <=0);return true;
+
+    for(let i = 0 ;i<checkString.length;i++){
+        if(checkString[i] ==="{" ){
+            stack.push(checkString[i]);
+        } esle if(checkString[i] === "}"){
+            if(stack.length > 0){
+                stack.pop();
+            } else {
+                return false;
+            }
+        }
+    }
+
+    if(stack.pop()) return false;
+    return true;
+}
+```
