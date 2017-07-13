@@ -442,35 +442,3 @@ function dequeue(stackInput,stackOutput){
 }
 ```
 
-**函数判断大括号是否闭合**
-
-```
-let expression = '{{}{}{}}';
-let expressionFalse = '{{}{}{}';
-
-isBalanced(expression);//true
-isBalanced(expressionFalse);//false
-isBalanced("");//false
-
-function isBalanced(expression) {
-    let checkString = expression;
-    let stack=[];
-
-    if(checkString <=0);return true;
-
-    for(let i = 0 ;i<checkString.length;i++){
-        if(checkString[i] ==="{" ){
-            stack.push(checkString[i]);
-        } esle if(checkString[i] === "}"){
-            if(stack.length > 0){
-                stack.pop();
-            } else {
-                return false;
-            }
-        }
-    }
-
-    if(stack.pop()) return false;
-    return true;
-}
-```
